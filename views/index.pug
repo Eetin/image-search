@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+    head
+        title Image Search Abstraction Layer
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+        link(rel="stylesheet" href="./styles.css")
+    
+    body
+        .container
+            h1.text-center freeCodeCamp API Basejump: Image Search Abstraction Layer
+            h2 Usage:
+            ul
+                li Search for images: 
+                    a(href= appUrl + 'search/funny animals')= appUrl + 'search/funny animals'
+                li Search for images with offset: 
+                    a(href= appUrl + 'search/funny animals?offset=10')= appUrl + 'search/funny animals?offset=10'
+                li Search history: 
+                    a(href= appUrl + 'history')= appUrl + 'history'
+                
+            h2 Example search output:
+                pre.
+                    [
+                        {
+                            "image_url": "https://i.ytimg.com/vi/930PmOr-cYk/hqdefault.jpg",
+                            "alt_text": "funny animals compilation ...",
+                            "thumbnail_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRVWLY0-5zLAa90cpmTAsmMDLLqXYpV6gHW7gk8-50hfLJ8n6Xav6e2F-w",
+                            "page_url": "https://www.youtube.com/watch?v=930PmOr-cYk"
+                        },
+                        {
+                            "image_url": "http://quotesnhumor.com/wp-content/uploads/2015/07/Top-30-Very-Funny-Animals-Memes-Jokes.jpg",
+                            "alt_text": "Top 30 Very Funny Animals ...",
+                            "thumbnail_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQEMDRZYdk-QEcsKGTba0lvBuSZRPx5LSdRwPV9ERVLfBxySMzxjXtlG9V9",
+                            "page_url": "http://quotesnhumor.com/top-30-very-funny-animals-memes/"
+                        },
+                        ...
+                    ]
+            h2 Example History Output:
+                pre.
+                    [
+                        {
+                        "offset": 10,
+                        "search": "funny animals",
+                        "date": "2016-08-02T13:03:32.822Z"
+                        },
+                        {
+                        "search": "funny animals",
+                        "date": "2016-08-02T13:03:26.290Z"
+                        },
+                        ...
+                    ]
